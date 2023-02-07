@@ -28,12 +28,104 @@ body{
     background-color: #fff;
     #display{
         color:#0a1e23;
+        margin: 0 10px;
+        height: 120px;
+        width: auto;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        font-size: 30px;
+        margin-bottom: 20px;
+        font-weight: 800;
     }
-    button#clear{
+    #equal{
+        height:130px
+    }
+    #clear{
         background-color: #ffd5d8;
         color: #fc4552;
     }
-    button.btn-number{
-        
+    .btn-number{
+        background-color: #c3eaff;
+        color: #f967f3;     
+    }
+    .btn.equal {
+        background-color: #adf9e7;
+        color: #000;
+    }
+    &.dark{
+        background-color: #1b1b1b;
+
+        #display{
+            color:#f8fafb;
+        }
+        #clear{
+            background-color: #4c35aa;
+            color: white;
+        }
+        .btn-number{
+            background-color: #8efda6;
+            color: black;
+            font-weight: 600;
+        }
+        .btn-operator{
+            background-color: #f0db4f;
+            color: #aa00a4;
+        }
+        .btn-equal{
+            background-color: #f23b00;
+            color: #ffff;
+        }
+
+    }
+
+}
+
+.theme-toggler{
+    position:absolute;
+    top:30px;
+    right:30px;
+    color:#fff;
+    cursor:pointer;
+    z-index: 1;
+    &::before{
+        content: '';
+        height: 30px;
+        width: 30px;
+        top:50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background-color: #333;
+        z-index: -1;
     }
 }
+
+.theme-toggler .active {
+    color: #333;
+    &::before{
+        background-color: #fff;
+    }
+}
+
+button{
+    height: 60px;
+    width: 60px;
+    border: 0;
+    border-radius: 30px;
+    margin: 5px;
+    font-size: 20px;
+    cursor:pointer;
+    transition: all 200ms ease;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+// Dark Theme
+
+// .calculator .dark {
+//     background-color: #1B1B1B;
+// }
+// .calculator .dark .display{
+//     color
+// }
