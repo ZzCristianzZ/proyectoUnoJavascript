@@ -90,6 +90,7 @@ body{
     z-index: 1;
     &::before{
         content: '';
+        position: absolute;
         height: 30px;
         width: 30px;
         top:50%;
